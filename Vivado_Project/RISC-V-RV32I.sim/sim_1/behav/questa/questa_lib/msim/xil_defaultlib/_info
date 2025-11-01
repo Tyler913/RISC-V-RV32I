@@ -1,0 +1,66 @@
+m255
+K4
+z2
+!s11f vlog 2024.1 2024.02, Feb  1 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/TylerHong/Development/GitHub_Project/FPGA/RISC-V-RV32I/Vivado_Project/RISC-V-RV32I.sim/sim_1/behav/questa
+vALU
+2../../../../../RTL/ALU.v
+!s10a 1762010983
+Z1 !s110 1762011086
+!i10b 1
+!s100 Iz8B0_Kza5L7b62:F92S=0
+IMUl>9nWYKddDaefkc0LCl0
+R0
+w1762010983
+8../../../../../RTL/ALU.v
+F../../../../../RTL/ALU.v
+!i122 0
+L0 1 41
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 OL;L;2024.1;79
+r1
+!s85 0
+31
+Z4 !s108 1762011086.000000
+!s107 ../../../../../RTL/ALU.v|
+!s90 -incr|-mfcu|-work|xil_defaultlib|+incdir+../../../../../RTL|+incdir+../../../../../../../../../../Applications/Vivado_2025.1.1/2025.1.1/Vivado/data/rsb/busdef|+incdir+../../../../RISC-V-RV32I.ip_user_files/ipstatic|../../../../../RTL/ALU.v|
+!i113 0
+o-mfcu -work xil_defaultlib -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+!s92 -mfcu -work xil_defaultlib +incdir+../../../../../RTL +incdir+../../../../../../../../../../Applications/Vivado_2025.1.1/2025.1.1/Vivado/data/rsb/busdef +incdir+../../../../RISC-V-RV32I.ip_user_files/ipstatic -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z5 tCvgOpt 0
+n@a@l@u
+YALU_interface
+!s10a 1762003814
+Z6 !s105 ALU_interface_sv_unit
+DXx4 work 21 ALU_interface_sv_unit 0 22 GTE7=>D5bh>XVB2TPKa[:1
+Z7 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+R1
+!i10b 1
+!s100 hU0bG;hWZQUJWhS[zIfS02
+IC79>8WA3gzkhHDIB3f76F1
+S1
+R0
+w1762003814
+Z8 8../../../../../Simulation/ALU/ALU_interface.sv
+Z9 F../../../../../Simulation/ALU/ALU_interface.sv
+!i122 1
+Z10 L0 5 0
+R2
+R3
+r1
+!s85 0
+31
+R4
+Z11 !s107 ../../../../../Simulation/ALU/ALU_scoreboard.sv|../../../../../Simulation/ALU/ALU_generator.sv|../../../../../Simulation/ALU/ALU_monitor.sv|../../../../../Simulation/ALU/ALU_driver.sv|../../../../../Simulation/ALU/ALU_transaction.sv|../../../../../Simulation/ALU/ALU_tb_top.sv|../../../../../Simulation/ALU/ALU_interface.sv|
+Z12 !s90 -incr|-mfcu|-sv|-work|xil_defaultlib|+incdir+../../../../../RTL|+incdir+../../../../../../../../../../Applications/Vivado_2025.1.1/2025.1.1/Vivado/data/rsb/busdef|+incdir+../../../../RISC-V-RV32I.ip_user_files/ipstatic|../../../../../Simulation/ALU/ALU_interface.sv|../../../../../Simulation/ALU/ALU_tb_top.sv|
+!i113 0
+Z13 o-mfcu -sv -work xil_defaultlib -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z14 !s92 -mfcu -sv -work xil_defaultlib +incdir+../../../../../RTL +incdir+../../../../../../../../../../Applications/Vivado_2025.1.1/2025.1.1/Vivado/data/rsb/busdef +incdir+../../../../RISC-V-RV32I.ip_user_files/ipstatic -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R5
+n@a@l@u_interface

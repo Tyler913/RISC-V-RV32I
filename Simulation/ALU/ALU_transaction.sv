@@ -16,8 +16,8 @@ class ALU_Transaction;
     }
 
 
-    function void diaplay(string name = "ALU_Transaction");
-        $$display("[%s] a=0x%h, b=0x%h, ctrl=%d -> result=0x%h, zero=%b",
+    function void display(string name = "ALU_Transaction");
+        $display("[%s] a=0x%h, b=0x%h, ctrl=%d -> result=0x%h, zero=%b",
             name, operand_a, operand_b, alu_control, alu_result, alu_zero_flag);
     endfunction
 
