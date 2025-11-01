@@ -1,7 +1,4 @@
 module ALU (
-    input wire pll_1_200MHz,
-    input wire pll_1_locked,
-
     input wire [31:0] operand_a,
     input wire [31:0] operand_b,
     input wire [3:0] alu_control,
