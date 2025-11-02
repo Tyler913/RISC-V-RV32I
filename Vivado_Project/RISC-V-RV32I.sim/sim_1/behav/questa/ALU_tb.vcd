@@ -1,0 +1,255 @@
+$date
+	Sun Nov  2 12:23:41 2025
+$end
+$version
+	QuestaSim Version 2024.1
+$end
+$timescale
+	1ps
+$end
+
+$scope module ALU_tb $end
+$var reg 32 ! operand_a [31:0] $end
+$var reg 32 " operand_b [31:0] $end
+$var reg 4 # alu_control [3:0] $end
+$var wire 1 $ alu_result [31] $end
+$var wire 1 % alu_result [30] $end
+$var wire 1 & alu_result [29] $end
+$var wire 1 ' alu_result [28] $end
+$var wire 1 ( alu_result [27] $end
+$var wire 1 ) alu_result [26] $end
+$var wire 1 * alu_result [25] $end
+$var wire 1 + alu_result [24] $end
+$var wire 1 , alu_result [23] $end
+$var wire 1 - alu_result [22] $end
+$var wire 1 . alu_result [21] $end
+$var wire 1 / alu_result [20] $end
+$var wire 1 0 alu_result [19] $end
+$var wire 1 1 alu_result [18] $end
+$var wire 1 2 alu_result [17] $end
+$var wire 1 3 alu_result [16] $end
+$var wire 1 4 alu_result [15] $end
+$var wire 1 5 alu_result [14] $end
+$var wire 1 6 alu_result [13] $end
+$var wire 1 7 alu_result [12] $end
+$var wire 1 8 alu_result [11] $end
+$var wire 1 9 alu_result [10] $end
+$var wire 1 : alu_result [9] $end
+$var wire 1 ; alu_result [8] $end
+$var wire 1 < alu_result [7] $end
+$var wire 1 = alu_result [6] $end
+$var wire 1 > alu_result [5] $end
+$var wire 1 ? alu_result [4] $end
+$var wire 1 @ alu_result [3] $end
+$var wire 1 A alu_result [2] $end
+$var wire 1 B alu_result [1] $end
+$var wire 1 C alu_result [0] $end
+$var wire 1 D alu_zero_flag $end
+$var integer 32 E error_count $end
+
+$scope module ALU_instance $end
+$var parameter 4 F ALU_ADD $end
+$var parameter 4 G ALU_SUB $end
+$var parameter 4 H ALU_SLL $end
+$var parameter 4 I ALU_SRL $end
+$var parameter 4 J ALU_SRA $end
+$var parameter 4 K ALU_SLT $end
+$var parameter 4 L ALU_SLTU $end
+$var parameter 4 M ALU_AND $end
+$var parameter 4 N ALU_OR $end
+$var parameter 4 O ALU_XOR $end
+$var wire 1 P operand_a [31] $end
+$var wire 1 Q operand_a [30] $end
+$var wire 1 R operand_a [29] $end
+$var wire 1 S operand_a [28] $end
+$var wire 1 T operand_a [27] $end
+$var wire 1 U operand_a [26] $end
+$var wire 1 V operand_a [25] $end
+$var wire 1 W operand_a [24] $end
+$var wire 1 X operand_a [23] $end
+$var wire 1 Y operand_a [22] $end
+$var wire 1 Z operand_a [21] $end
+$var wire 1 [ operand_a [20] $end
+$var wire 1 \ operand_a [19] $end
+$var wire 1 ] operand_a [18] $end
+$var wire 1 ^ operand_a [17] $end
+$var wire 1 _ operand_a [16] $end
+$var wire 1 ` operand_a [15] $end
+$var wire 1 a operand_a [14] $end
+$var wire 1 b operand_a [13] $end
+$var wire 1 c operand_a [12] $end
+$var wire 1 d operand_a [11] $end
+$var wire 1 e operand_a [10] $end
+$var wire 1 f operand_a [9] $end
+$var wire 1 g operand_a [8] $end
+$var wire 1 h operand_a [7] $end
+$var wire 1 i operand_a [6] $end
+$var wire 1 j operand_a [5] $end
+$var wire 1 k operand_a [4] $end
+$var wire 1 l operand_a [3] $end
+$var wire 1 m operand_a [2] $end
+$var wire 1 n operand_a [1] $end
+$var wire 1 o operand_a [0] $end
+$var wire 1 p operand_b [31] $end
+$var wire 1 q operand_b [30] $end
+$var wire 1 r operand_b [29] $end
+$var wire 1 s operand_b [28] $end
+$var wire 1 t operand_b [27] $end
+$var wire 1 u operand_b [26] $end
+$var wire 1 v operand_b [25] $end
+$var wire 1 w operand_b [24] $end
+$var wire 1 x operand_b [23] $end
+$var wire 1 y operand_b [22] $end
+$var wire 1 z operand_b [21] $end
+$var wire 1 { operand_b [20] $end
+$var wire 1 | operand_b [19] $end
+$var wire 1 } operand_b [18] $end
+$var wire 1 ~ operand_b [17] $end
+$var wire 1 !! operand_b [16] $end
+$var wire 1 "! operand_b [15] $end
+$var wire 1 #! operand_b [14] $end
+$var wire 1 $! operand_b [13] $end
+$var wire 1 %! operand_b [12] $end
+$var wire 1 &! operand_b [11] $end
+$var wire 1 '! operand_b [10] $end
+$var wire 1 (! operand_b [9] $end
+$var wire 1 )! operand_b [8] $end
+$var wire 1 *! operand_b [7] $end
+$var wire 1 +! operand_b [6] $end
+$var wire 1 ,! operand_b [5] $end
+$var wire 1 -! operand_b [4] $end
+$var wire 1 .! operand_b [3] $end
+$var wire 1 /! operand_b [2] $end
+$var wire 1 0! operand_b [1] $end
+$var wire 1 1! operand_b [0] $end
+$var wire 1 2! alu_control [3] $end
+$var wire 1 3! alu_control [2] $end
+$var wire 1 4! alu_control [1] $end
+$var wire 1 5! alu_control [0] $end
+$var reg 32 6! alu_result [31:0] $end
+$var reg 1 7! alu_zero_flag $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1010 !
+b101 "
+b0 #
+b1111 6!
+07!
+b0 F
+b1 G
+b10 H
+b11 I
+b100 J
+b101 K
+b110 L
+b111 M
+b1000 N
+b1001 O
+b0 E
+1C
+1B
+1A
+1@
+0?
+0>
+0=
+0<
+0;
+0:
+09
+08
+07
+06
+05
+04
+03
+02
+01
+00
+0/
+0.
+0-
+0,
+0+
+0*
+0)
+0(
+0'
+0&
+0%
+0$
+0D
+05!
+04!
+03!
+02!
+11!
+00!
+1/!
+0.!
+0-!
+0,!
+0+!
+0*!
+0)!
+0(!
+0'!
+0&!
+0%!
+0$!
+0#!
+0"!
+0!!
+0~
+0}
+0|
+0{
+0z
+0y
+0x
+0w
+0v
+0u
+0t
+0s
+0r
+0q
+0p
+0o
+1n
+0m
+1l
+0k
+0j
+0i
+0h
+0g
+0f
+0e
+0d
+0c
+0b
+0a
+0`
+0_
+0^
+0]
+0\
+0[
+0Z
+0Y
+0X
+0W
+0V
+0U
+0T
+0S
+0R
+0Q
+0P
+$end
+#10000
+b1 E

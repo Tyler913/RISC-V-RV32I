@@ -20,6 +20,7 @@ localparam ALU_OR  = 4'd8;
 localparam ALU_XOR = 4'd9;
 
 
+
 always @(*) begin
     case (alu_control)
         ALU_ADD: alu_result = operand_a + operand_b;
@@ -35,7 +36,7 @@ always @(*) begin
         default: alu_result = 32'b0;
     endcase
 
-    alu_zero_flag = (alu_result == 32'd0) ? 32'b1 : 32'b0;
+    alu_zero_flag = (alu_result == 32'd0) ? 1'b1 : 1'b0;
 end
 
 endmodule

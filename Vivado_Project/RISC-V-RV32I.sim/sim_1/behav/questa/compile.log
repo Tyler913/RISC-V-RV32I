@@ -1,4 +1,4 @@
-# do {ALU_tb_top_compile.do}
+# do {ALU_tb_compile.do}
 # ** Warning: (vlib-34) Library already exists at "questa_lib/work".
 # Errors: 0, Warnings: 1
 # ** Warning: (vlib-34) Library already exists at "questa_lib/msim".
@@ -9,94 +9,21 @@
 # vmap xil_defaultlib questa_lib/msim/xil_defaultlib 
 # Modifying modelsim.ini
 # QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
-# Start time: 23:32:51 on Nov 01,2025
-# vlog -incr -mfcu -work xil_defaultlib "+incdir+../../../../../RTL" "+incdir+../../../../../../../../../../Applications/Vivado_2025.1.1/2025.1.1/Vivado/data/rsb/busdef" "+incdir+../../../../RISC-V-RV32I.ip_user_files/ipstatic" ../../../../../RTL/ALU.v 
-# -- Skipping module ALU
+# Start time: 12:23:22 on Nov 02,2025
+# vlog -incr -mfcu -work xil_defaultlib "+incdir+../../../../../RTL" "+incdir+../../../../../../../../../../Applications/Vivado_2025.1.1/2025.1.1/Vivado/data/rsb/busdef" "+incdir+../../../../RISC-V-RV32I.ip_user_files/ipstatic" ../../../../../RTL/ALU.v ../../../../../Simulation/ALU_tb.v 
+# -- Compiling module ALU
+# -- Compiling module ALU_tb
 # 
 # Top level modules:
-# 	ALU
-# End time: 23:32:51 on Nov 01,2025, Elapsed time: 0:00:00
+# 	ALU_tb
+# End time: 12:23:22 on Nov 02,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
-# Start time: 23:32:51 on Nov 01,2025
-# vlog -incr -mfcu -sv -work xil_defaultlib "+incdir+../../../../../RTL" "+incdir+../../../../../../../../../../Applications/Vivado_2025.1.1/2025.1.1/Vivado/data/rsb/busdef" "+incdir+../../../../RISC-V-RV32I.ip_user_files/ipstatic" ../../../../../Simulation/ALU/ALU_interface.sv ../../../../../Simulation/ALU/ALU_tb_top.sv 
-# -- Skipping interface ALU_interface
-# -- Compiling package ALU_interface_sv_unit
-# ** Error: ../../../../../Simulation/ALU/ALU_driver.sv(11): (vlog-13216) Illegal assignment to type 'virtual interface ALI_interface.TB' from type 'virtual interface ALU_interface.TB': Virtual interface type 'ALI_interface' cannot be assigned type 'ALU_interface'.
-# ** Error: ../../../../../Simulation/ALU/ALU_tb_top.sv(20): (vlog-2730) Undefined variable: 'ALU_Transaction'.
-# -- Compiling module ALU_tb_top
-# ** Error: ../../../../../Simulation/ALU/ALU_tb_top.sv(20): Class specialization parameter must be constant.
-# ** Error: ../../../../../Simulation/ALU/ALU_tb_top.sv(20): Illegal assignment of a value to type parameter 'T' of class 'mailbox'
+# Start time: 12:23:22 on Nov 02,2025
+# vlog -work xil_defaultlib glbl.v 
+# -- Compiling module glbl
 # 
-# ** Error: ../../../../../Simulation/ALU/ALU_tb_top.sv(21): Class specialization parameter must be constant.
-# ** Error: ../../../../../Simulation/ALU/ALU_tb_top.sv(21): Illegal assignment of a value to type parameter 'T' of class 'mailbox'
-# 
-# ** Error: ../../../../../Simulation/ALU/ALU_tb_top.sv(24): 'ALU_Generator' is an unknown type.
-# Or did you omit the '()' for an instantiation?
-# ** Error: ../../../../../Simulation/ALU/ALU_tb_top.sv(25): 'ALU_Driver' is an unknown type.
-# Or did you omit the '()' for an instantiation?
-# ** Error: ../../../../../Simulation/ALU/ALU_tb_top.sv(26): 'ALU_Monitor' is an unknown type.
-# Or did you omit the '()' for an instantiation?
-# ** Error: ../../../../../Simulation/ALU/ALU_tb_top.sv(27): 'ALU_Scoreboard' is an unknown type.
-# Or did you omit the '()' for an instantiation?
-# ** Error: ../../../../../Simulation/ALU/ALU_tb_top.sv(30): 'gen' is not a variable
-# ** Error: ../../../../../Simulation/ALU/ALU_tb_top.sv(30): Illegal LHS of assignment.
-# ** Error: ../../../../../Simulation/ALU/ALU_tb_top.sv(30): 'new' must be used to assign to a class or covergroup handle.
-# ** Error: ../../../../../Simulation/ALU/ALU_tb_top.sv(31): 'drv' is not a variable
-# ** Error: ../../../../../Simulation/ALU/ALU_tb_top.sv(31): Illegal LHS of assignment.
-# ** Error: ../../../../../Simulation/ALU/ALU_tb_top.sv(31): 'new' must be used to assign to a class or covergroup handle.
-# ** Error: ../../../../../Simulation/ALU/ALU_tb_top.sv(32): 'mon' is not a variable
-# ** Error: ../../../../../Simulation/ALU/ALU_tb_top.sv(32): Illegal LHS of assignment.
-# ** Error: ../../../../../Simulation/ALU/ALU_tb_top.sv(32): 'new' must be used to assign to a class or covergroup handle.
-# ** Error: ../../../../../Simulation/ALU/ALU_tb_top.sv(33): 'scb' is not a variable
-# ** Error: ../../../../../Simulation/ALU/ALU_tb_top.sv(33): Illegal LHS of assignment.
-# ** Error: ../../../../../Simulation/ALU/ALU_tb_top.sv(33): 'new' must be used to assign to a class or covergroup handle.
-# End time: 23:32:51 on Nov 01,2025, Elapsed time: 0:00:00
-# Errors: 22, Warnings: 0
-# child process exited abnormally
-# Error in macro ./ALU_tb_top_compile.do line 22
-# QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
-# Start time: 23:32:51 on Nov 01,2025
-# vlog -incr -mfcu -sv -work xil_defaultlib "+incdir+../../../../../RTL" "+incdir+../../../../../../../../../../Applications/Vivado_2025.1.1/2025.1.1/Vivado/data/rsb/busdef" "+incdir+../../../../RISC-V-RV32I.ip_user_files/ipstatic" ../../../../../Simulation/ALU/ALU_interface.sv ../../../../../Simulation/ALU/ALU_tb_top.sv 
-# -- Skipping interface ALU_interface
-# -- Compiling package ALU_interface_sv_unit
-# ** Error: ../../../../../Simulation/ALU/ALU_driver.sv(11): (vlog-13216) Illegal assignment to type 'virtual interface ALI_interface.TB' from type 'virtual interface ALU_interface.TB': Virtual interface type 'ALI_interface' cannot be assigned type 'ALU_interface'.
-# ** Error: ../../../../../Simulation/ALU/ALU_tb_top.sv(20): (vlog-2730) Undefined variable: 'ALU_Transaction'.
-# -- Compiling module ALU_tb_top
-# ** Error: ../../../../../Simulation/ALU/ALU_tb_top.sv(20): Class specialization parameter must be constant.
-# ** Error: ../../../../../Simulation/ALU/ALU_tb_top.sv(20): Illegal assignment of a value to type parameter 'T' of class 'mailbox'
-# 
-# ** Error: ../../../../../Simulation/ALU/ALU_tb_top.sv(21): Class specialization parameter must be constant.
-# ** Error: ../../../../../Simulation/ALU/ALU_tb_top.sv(21): Illegal assignment of a value to type parameter 'T' of class 'mailbox'
-# 
-# ** Error: ../../../../../Simulation/ALU/ALU_tb_top.sv(24): 'ALU_Generator' is an unknown type.
-# Or did you omit the '()' for an instantiation?
-# ** Error: ../../../../../Simulation/ALU/ALU_tb_top.sv(25): 'ALU_Driver' is an unknown type.
-# Or did you omit the '()' for an instantiation?
-# ** Error: ../../../../../Simulation/ALU/ALU_tb_top.sv(26): 'ALU_Monitor' is an unknown type.
-# Or did you omit the '()' for an instantiation?
-# ** Error: ../../../../../Simulation/ALU/ALU_tb_top.sv(27): 'ALU_Scoreboard' is an unknown type.
-# Or did you omit the '()' for an instantiation?
-# ** Error: ../../../../../Simulation/ALU/ALU_tb_top.sv(30): 'gen' is not a variable
-# ** Error: ../../../../../Simulation/ALU/ALU_tb_top.sv(30): Illegal LHS of assignment.
-# ** Error: ../../../../../Simulation/ALU/ALU_tb_top.sv(30): 'new' must be used to assign to a class or covergroup handle.
-# ** Error: ../../../../../Simulation/ALU/ALU_tb_top.sv(31): 'drv' is not a variable
-# ** Error: ../../../../../Simulation/ALU/ALU_tb_top.sv(31): Illegal LHS of assignment.
-# ** Error: ../../../../../Simulation/ALU/ALU_tb_top.sv(31): 'new' must be used to assign to a class or covergroup handle.
-# ** Error: ../../../../../Simulation/ALU/ALU_tb_top.sv(32): 'mon' is not a variable
-# ** Error: ../../../../../Simulation/ALU/ALU_tb_top.sv(32): Illegal LHS of assignment.
-# ** Error: ../../../../../Simulation/ALU/ALU_tb_top.sv(32): 'new' must be used to assign to a class or covergroup handle.
-# ** Error: ../../../../../Simulation/ALU/ALU_tb_top.sv(33): 'scb' is not a variable
-# ** Error: ../../../../../Simulation/ALU/ALU_tb_top.sv(33): Illegal LHS of assignment.
-# ** Error: ../../../../../Simulation/ALU/ALU_tb_top.sv(33): 'new' must be used to assign to a class or covergroup handle.
-# End time: 23:32:51 on Nov 01,2025, Elapsed time: 0:00:00
-# Errors: 22, Warnings: 0
-# child process exited abnormally
-#     while executing
-# "exec <nul: {D:\Applications\questasim64_2024.1\win64\vlog.EXE} -incr -mfcu -sv -work xil_defaultlib +incdir+../../../../../RTL +incdir+../../../../../..."
-#     ("uplevel" body line 1)
-#     invoked from within
-# "uplevel 1 exec $redir $new [lrange $args 1 end]"
-#     (procedure "::unknown" line 80)
-#     invoked from within
-# "D:\\Applications\\questasim64_2024.1\\win64\\vlog  -incr -mfcu -sv -work xil_defaultlib  "+incdir+../../../../../RTL" "+incdir+../../../../../../../....."
+# Top level modules:
+# 	glbl
+# End time: 12:23:22 on Nov 02,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

@@ -1,0 +1,30 @@
+# //  Questa Sim-64
+# //  Version 2024.1 win64 Feb  1 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do {ALU_tb_simulate.do}
+# vsim -lib xil_defaultlib ALU_tb_opt 
+# Start time: 12:23:34 on Nov 02,2025
+# Loading work.ALU_tb(fast)
+# Loading work.ALU(fast)
+# Loading work.glbl(fast)
+# 1
+# 1
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# Starting ALU Testbench...
+# Testing 1: ADD
+# Test 1 Failed: ADD
+# End time: 12:25:59 on Nov 02,2025, Elapsed time: 0:02:25
+# Errors: 0, Warnings: 0
