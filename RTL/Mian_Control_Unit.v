@@ -7,7 +7,6 @@ module Main_Control_Unit (
     output reg mem_write,
     output reg branch,
     output reg jump,
-    output reg mem_to_reg,
     // 2'b00 = Write data from ALU result
     // 2'b01 = Write data from Data Memory
     // 2'b10 = Write data from PC+4 (for jal/jalr)

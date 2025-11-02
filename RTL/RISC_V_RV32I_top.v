@@ -37,7 +37,6 @@ wire mem_read;
 wire mem_write;
 wire branch;
 wire jump;
-wire mem_to_reg;
 wire [1:0] writeback_sel;
 wire [1:0] alu_op;
 
@@ -69,7 +68,6 @@ Main_Control_Unit Main_Control_Unit_Instance (
     .mem_write(mem_write),
     .branch(branch),
     .jump(jump),
-    .mem_to_reg(mem_to_reg),
     .writeback_sel(writeback_sel),
     .alu_op(alu_op)
 );
