@@ -2,6 +2,8 @@ m255
 K4
 z2
 Z0 !s99 nomlopt
+R0
+R0
 !s11f vlog 2024.1 2024.02, Feb  1 2024
 13
 !s112 1.1
@@ -93,18 +95,19 @@ TALU_tb_opt
 !s110 1762057408
 V_YjTJ3^GLWME>oD?SXcZ[2
 04 6 4 work ALU_tb fast 0
-04 4 4 work glbl fast 0
+Z12 04 4 4 work glbl fast 0
 R0
-!s12f OEM100
-!s12b OEM100
-!s124 OEM100
-o-suppress 10016 +acc=npr -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm -work xil_defaultlib
+Z13 !s12f OEM100
+Z14 !s12b OEM100
+Z15 !s124 OEM100
+Z16 o-suppress 10016 +acc=npr -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm -work xil_defaultlib
 R11
 n@a@l@u_tb_opt
-OL;O;2024.1;79
+Z17 OL;O;2024.1;79
+R1
 vglbl
 2glbl.v
-R3
+!s110 1762066166
 !i10b 1
 !s100 TL<1YD8i05Z]RjCH=O^Cf3
 IEIl9nCH7KnQHNU=hnG=VH2
@@ -112,16 +115,81 @@ R1
 w1748340170
 8glbl.v
 Fglbl.v
-!i122 3
+!i122 6
 L0 6 78
 R4
 R5
 r1
 !s85 0
 31
-R6
+!s108 1762066166.000000
 !s107 glbl.v|
 !s90 -work|xil_defaultlib|glbl.v|
 !i113 0
 o-work xil_defaultlib -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R11
+vRegister_File
+Z18 2../../../../../RTL/Register_File.v|../../../../../Simulation/Register_File_tb.v
+!s10a 1762064612
+Z19 !s110 1762065860
+!i10b 1
+!s100 _MXKnZh0Gn^IWF]b@:RW?0
+IEg4FF=SeoiN4<49hFFHl^0
+R1
+w1762064612
+8../../../../../RTL/Register_File.v
+F../../../../../RTL/Register_File.v
+!i122 4
+L0 1 29
+R4
+R5
+r1
+!s85 0
+31
+Z20 !s108 1762065860.000000
+Z21 !s107 ../../../../../Simulation/Register_File_tb.v|../../../../../RTL/Register_File.v|
+Z22 !s90 -incr|-mfcu|-work|xil_defaultlib|+incdir+../../../../../RTL|+incdir+../../../../../../../../../../Applications/Vivado_2025.1.1/2025.1.1/Vivado/data/rsb/busdef|+incdir+../../../../RISC-V-RV32I.ip_user_files/ipstatic|../../../../../RTL/Register_File.v|../../../../../Simulation/Register_File_tb.v|
+!i113 0
+R9
+R10
+R11
+n@register_@file
+vRegister_File_tb
+R18
+!s10a 1762065790
+R19
+!i10b 1
+!s100 DY]XoVi]<E6`Ro^4ncK_<3
+IfB8UVA2n`456Qb[[l8MkO1
+R1
+w1762065790
+8../../../../../Simulation/Register_File_tb.v
+F../../../../../Simulation/Register_File_tb.v
+!i122 4
+L0 4 62
+R4
+R5
+r1
+!s85 0
+31
+R20
+R21
+R22
+!i113 0
+R9
+R10
+R11
+n@register_@file_tb
+TRegister_File_tb_opt
+!s110 1762066168
+VGG0[TQRManlQJzBYa6]f`2
+04 16 4 work Register_File_tb fast 0
+R12
+R0
+R13
+R14
+R15
+R16
+R11
+n@register_@file_tb_opt
+R17

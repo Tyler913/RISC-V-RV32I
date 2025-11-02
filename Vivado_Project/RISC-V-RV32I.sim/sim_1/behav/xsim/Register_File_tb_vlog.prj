@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  -i "../../../../../RTL" --include "../../../../../../../../../../Applications/Vivado_2025.1.1/2025.1.1/Vivado/data/rsb/busdef" --include "../../../../RISC-V-RV32I.ip_user_files/ipstatic" \
+"../../../../../RTL/Register_File.v" \
+"../../../../../Simulation/Register_File_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

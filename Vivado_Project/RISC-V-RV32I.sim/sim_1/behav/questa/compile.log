@@ -1,4 +1,4 @@
-# do {ALU_tb_compile.do}
+# do {Register_File_tb_compile.do}
 # ** Warning: (vlib-34) Library already exists at "questa_lib/work".
 # Errors: 0, Warnings: 1
 # ** Warning: (vlib-34) Library already exists at "questa_lib/msim".
@@ -9,21 +9,21 @@
 # vmap xil_defaultlib questa_lib/msim/xil_defaultlib 
 # Modifying modelsim.ini
 # QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
-# Start time: 12:23:22 on Nov 02,2025
-# vlog -incr -mfcu -work xil_defaultlib "+incdir+../../../../../RTL" "+incdir+../../../../../../../../../../Applications/Vivado_2025.1.1/2025.1.1/Vivado/data/rsb/busdef" "+incdir+../../../../RISC-V-RV32I.ip_user_files/ipstatic" ../../../../../RTL/ALU.v ../../../../../Simulation/ALU_tb.v 
-# -- Compiling module ALU
-# -- Compiling module ALU_tb
+# Start time: 14:49:26 on Nov 02,2025
+# vlog -incr -mfcu -work xil_defaultlib "+incdir+../../../../../RTL" "+incdir+../../../../../../../../../../Applications/Vivado_2025.1.1/2025.1.1/Vivado/data/rsb/busdef" "+incdir+../../../../RISC-V-RV32I.ip_user_files/ipstatic" ../../../../../RTL/Register_File.v ../../../../../Simulation/Register_File_tb.v 
+# -- Skipping module Register_File
+# -- Skipping module Register_File_tb
 # 
 # Top level modules:
-# 	ALU_tb
-# End time: 12:23:22 on Nov 02,2025, Elapsed time: 0:00:00
+# 	Register_File_tb
+# End time: 14:49:26 on Nov 02,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vlog 2024.1 Compiler 2024.02 Feb  1 2024
-# Start time: 12:23:22 on Nov 02,2025
+# Start time: 14:49:26 on Nov 02,2025
 # vlog -work xil_defaultlib glbl.v 
 # -- Compiling module glbl
 # 
 # Top level modules:
 # 	glbl
-# End time: 12:23:22 on Nov 02,2025, Elapsed time: 0:00:00
+# End time: 14:49:26 on Nov 02,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0

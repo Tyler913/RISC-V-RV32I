@@ -12,19 +12,85 @@
 # // of the Customer's facilities without the express written permission of SISW,
 # // and may not be used in any way not expressly authorized by SISW.
 # //
-# do {ALU_tb_simulate.do}
-# vsim -lib xil_defaultlib ALU_tb_opt 
-# Start time: 12:23:34 on Nov 02,2025
-# Loading work.ALU_tb(fast)
-# Loading work.ALU(fast)
+# do {Register_File_tb_simulate.do}
+# vsim -lib xil_defaultlib Register_File_tb_opt 
+# Start time: 14:49:33 on Nov 02,2025
+# Loading work.Register_File_tb(fast)
+# Loading work.Register_File(fast)
 # Loading work.glbl(fast)
+#  Trace back: invalid command name ""
+#     while executing
+# "{} idsToReferencePaths 1 {}"
+#     ("uplevel" body line 1)
+#     invoked from within
+# "uplevel 1 [lrange $args 0 end-1] [lindex $args end]"
+#     (procedure "applyToList" line 2)
+#     invoked from within
+# "applyToList $treeView idsToReferencePaths $useIds $top $expanded"
+#     (procedure "_resetTree" line 29)
+#     invoked from within
+# "_resetTree $w"
+#     (procedure "sort" line 6)
+#     invoked from within
+# "sort $w $col $dir"
+#     (procedure "structsort" line 9)
+#     invoked from within
+# "structsort .main_pane.structure 0 ascending"
+#     (in namespace inscope "::QStructure" script line 1)
+#     invoked from within
+# "namespace inscope ::QStructure {structsort .main_pane.structure} 0 ascending"
+#     ("eval" body line 1)
+#     invoked from within
+# "eval $itk_option(-sortcommand) $column $dir"
+#     (object "::.main_pane.structure.interior.cs.body.struct" method "::vsimwidgets::Hierarchy::sort" body line 26)
+#     invoked from within
+# "sort $sortIdx $dir"
+#     (object "::.main_pane.structure.interior.cs.body.struct" method "::vsimwidgets::Hierarchy::_initializeSortColumn" body line 10)
+#     invoked from within
+# "::.main_pane.structure.interior.cs.body.struct _initializeSortColumn"
+#     (in namespace inscope "::vsimwidgets::Hierarchy" script line 1)
+#     invoked from within
+# "namespace inscope ::vsimwidgets::Hierarchy {::.main_pane.structure.interior.cs.body.struct _initializeSortColumn}"
+#     ("after" script)
+#    <2:D:/Applications/questasim64_2024.1/win64/tk8.6/bgerror.tcl:106: ::tkerror {invalid command name ""}
+#    <1:eval:1: ::tk::dialog::error::bgerror {invalid command name ""}
 # 1
 # 1
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: hongy  Hostname: TYLER  ProcessID: 19920
+#           Attempting to use alternate WLF file "./wlftm33zik".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftm33zik
 # .main_pane.wave.interior.cs.body.pw.wf
 # .main_pane.structure.interior.cs.body.struct
 # .main_pane.objects.interior.cs.body.tree
-# Starting ALU Testbench...
-# Testing 1: ADD
-# Test 1 Failed: ADD
-# End time: 12:25:59 on Nov 02,2025, Elapsed time: 0:02:25
-# Errors: 0, Warnings: 0
+# Starting Register File Testbench...
+# Test 1: Write to and Read from Register 5
+# Test 1 passed.
+run -all
+# Break key hit
+# Break key hit
+# Break key hit
+# Break key hit
+# **** Error: SelectedSignalQ cmd: QObjects::SelectedTrigger .main_pane.objects sim
+# ****        invalid command name "SimObjView"
+# invalid command name "SimObjView"
+#     while executing
+# "$ViewName absnameToReferencePath $tv $useIds $top $absname"
+#     (object "::SimDataset::objectTreeView0" method "::SimDataset::ObjectTreeView::absnameToReferencePath" body line 5)
+#     invoked from within
+# "$TreeView absnameToReferencePath $useIds $top $absname"
+#     (procedure "ObjectsTreeView::AbsnameToReferencePath" line 4)
+#     invoked from within
+# "ObjectsTreeView::AbsnameToReferencePath $useIds $top $ssig"
+#     (procedure "SelectFromName" line 41)
+#     invoked from within
+# "SelectFromName $w $sig 0"
+#     (procedure "QObjects::SelectedTrigger" line 18)
+#     invoked from within
+# "QObjects::SelectedTrigger .main_pane.objects sim"
+#     ("eval" body line 1)
+#     invoked from within
+# "eval $p $tankNamespace "
+# Break key hit
+# ** UI-Msg (Error): (vish-4000) A design must be loaded before the "vsim_break" command can be used.

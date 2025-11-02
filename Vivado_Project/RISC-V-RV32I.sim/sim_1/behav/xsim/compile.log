@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/TylerHong/Development/GitHub_Project/FPGA/RISC-V-RV32I/RTL/Register_File.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Register_File
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/TylerHong/Development/GitHub_Project/FPGA/RISC-V-RV32I/Simulation/Register_File_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Register_File_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/TylerHong/Development/GitHub_Project/FPGA/RISC-V-RV32I/Vivado_Project/RISC-V-RV32I.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
