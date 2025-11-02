@@ -84,7 +84,6 @@ ALU_Control_Unit ALU_Control_Unit_Instance (
 
 Register_File Register_File_Instance (
     .pll_1_200MHz(pll_1_200MHz),
-
     .write_enable(reg_write),
     .read_reg1(instruction[19:15]),
     .read_reg2(instruction[24:20]),
