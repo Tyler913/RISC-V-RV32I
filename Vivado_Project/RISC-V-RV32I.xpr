@@ -9,10 +9,10 @@
   <Configuration>
     <Option Name="Id" Val="9b9b361d463942608f3735ccbd14bbd0"/>
     <Option Name="Part" Val="xczu3eg-sfvc784-2-i"/>
-    <Option Name="CompiledLibDir" Val="$PPRDIR/../../../../../../Applications/Vivado_2024.2/QuestaSim_Compile_IP"/>
+    <Option Name="CompiledLibDir" Val="$PPRDIR/../../../../../../Applications/Vivado_2025.1.1/2025.1.1/Questasim_Precompile"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
     <Option Name="CompiledLibDirModelSim" Val="$PCACHEDIR/compile_simlib/modelsim"/>
-    <Option Name="CompiledLibDirQuesta" Val="$PPRDIR/../../../../../../Applications/Vivado_2024.2/QuestaSim_Compile_IP"/>
+    <Option Name="CompiledLibDirQuesta" Val="$PPRDIR/../../../../../../Applications/Vivado_2025.1.1/2025.1.1/Questasim_Precompile"/>
     <Option Name="CompiledLibDirXcelium" Val="$PCACHEDIR/compile_simlib/xcelium"/>
     <Option Name="CompiledLibDirVCS" Val="$PCACHEDIR/compile_simlib/vcs"/>
     <Option Name="CompiledLibDirRiviera" Val="$PCACHEDIR/compile_simlib/riviera"/>
@@ -43,6 +43,7 @@
     <Option Name="SimulatorGccVersionVCS" Val="9.2.0"/>
     <Option Name="SimulatorGccVersionRiviera" Val="9.3.0"/>
     <Option Name="SimulatorGccVersionActiveHdl" Val="9.3.0"/>
+    <Option Name="TargetSimulator" Val="Questa"/>
     <Option Name="BoardPart" Val=""/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
