@@ -2,6 +2,7 @@ module ALU_Control_Unit (
     input wire [1:0] alu_op,
     input wire [2:0] funct3,
     input wire [6:0] funct7,
+    
     output reg [3:0] alu_control 
 );
 
