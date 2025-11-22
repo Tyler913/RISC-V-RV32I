@@ -58,6 +58,27 @@ wire [31:0] operand_b;
 wire [31:0] alu_result;
 wire alu_zero_flag;
 
+// Input to Program_Counter
+wire [31:0] next_pc_address;
+
+// Output from Program_Counter
+wire [31:0] current_pc_address;
+
+wire [31:0] pc_plus_4;
+
+
+Program_Counter Program_Counter_Instance (
+    .pll_1_200MHz(pll_1_200MHz),
+    .pll_1_locked_synced(pll_1_locked_synced),
+    .next_pc_address(next_pc_address),
+
+    .current_pc_address(current_pc_address)
+);
+
+assign pc_plus_4 = current_pc_address + 32'd4;
+
+// missing a mux here for next_pc_address calculation
+
 
 Main_Control_Unit Main_Control_Unit_Instance (
     .opcode(instruction[6:0]),
