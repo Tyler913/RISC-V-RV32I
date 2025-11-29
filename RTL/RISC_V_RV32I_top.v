@@ -80,6 +80,13 @@ assign pc_plus_4 = current_pc_address + 32'd4;
 // missing a mux here for next_pc_address calculation
 
 
+Instruction_Memory Instruction_Memory_Instance (
+    .program_counter(current_pc_address),
+
+    .instruction(instruction)
+);
+
+
 Main_Control_Unit Main_Control_Unit_Instance (
     .opcode(instruction[6:0]),
 
@@ -91,6 +98,13 @@ Main_Control_Unit Main_Control_Unit_Instance (
     .jump(jump),
     .writeback_sel(writeback_sel),
     .alu_op(alu_op)
+);
+
+
+Immediate_Generator Immediate_Generator_Instance (
+    .instruction(instruction),
+
+    .immediate_value(immediate_value)
 );
 
 
