@@ -19,80 +19,79 @@ module Main_Control_Unit (
     output reg [1:0] alu_op
 );
 
+    always @(*) begin
+        case (opcode)
+            7'b0110011: begin
+                reg_write     = 1'b1;
+                writeback_sel = 2'b00;
+                alu_op        = 2'b10;
+            end
 
-always @(*) begin
-    case (opcode)
-        7'b0110011: begin
-            reg_write     = 1'b1;
-            writeback_sel = 2'b00;
-            alu_op        = 2'b10;
-        end
+            7'b0010011: begin
+                reg_write     = 1'b1;
+                alu_src       = 1'b1;
+                writeback_sel = 2'b00;
+                alu_op        = 2'b11;
+            end
 
-        7'b0010011: begin
-            reg_write     = 1'b1;
-            alu_src       = 1'b1;
-            writeback_sel = 2'b00;
-            alu_op        = 2'b11;
-        end
+            7'b0000011: begin
+                reg_write     = 1'b1;
+                alu_src       = 1'b1;
+                mem_read      = 1'b1;
+                writeback_sel = 2'b01;
+                alu_op        = 2'b00;
+            end
 
-        7'b0000011: begin
-            reg_write     = 1'b1;
-            alu_src       = 1'b1;
-            mem_read      = 1'b1;
-            writeback_sel = 2'b01;
-            alu_op        = 2'b00;
-        end
+            7'b0100011: begin
+                alu_src   = 1'b1;
+                mem_write = 1'b1;
+                alu_op    = 2'b00;
+            end
 
-        7'b0100011: begin
-            alu_src   = 1'b1;
-            mem_write = 1'b1;
-            alu_op    = 2'b00;
-        end
+            7'b1100011: begin
+                branch = 1'b1;
+                alu_op = 2'b01;
+            end
 
-        7'b1100011: begin
-            branch = 1'b1;
-            alu_op = 2'b01;
-        end
+            7'b0110111: begin
+                reg_write     = 1'b1;
+                alu_src       = 1'b1;
+                writeback_sel = 2'b11;
+                alu_op        = 2'b00;
+            end
 
-        7'b0110111: begin
-            reg_write     = 1'b1;
-            alu_src       = 1'b1;
-            writeback_sel = 2'b11;
-            alu_op        = 2'b00;
-        end
+            7'b0010111: begin
+                reg_write     = 1'b1;
+                alu_src       = 1'b1;
+                writeback_sel = 2'b00;
+                alu_op        = 2'b00;
+            end
 
-        7'b0010111: begin
-            reg_write     = 1'b1;
-            alu_src       = 1'b1;
-            writeback_sel = 2'b00;
-            alu_op        = 2'b00;
-        end
+            7'b1101111: begin
+                reg_write     = 1'b1;
+                jump          = 1'b1;
+                writeback_sel = 2'b10;
+            end
 
-        7'b1101111: begin
-            reg_write     = 1'b1;
-            jump          = 1'b1;
-            writeback_sel = 2'b10;
-        end
+            7'b1100111: begin
+                reg_write     = 1'b1;
+                alu_src       = 1'b1;
+                jump          = 1'b1;
+                writeback_sel = 2'b10;
+                alu_op        = 2'b00;
+            end
 
-        7'b1100111: begin
-            reg_write     = 1'b1;
-            alu_src       = 1'b1;
-            jump          = 1'b1;
-            writeback_sel = 2'b10;
-            alu_op        = 2'b00;
-        end
-
-        default: begin
-            reg_write     = 1'b0;
-            alu_src       = 1'b0;
-            mem_read      = 1'b0;
-            mem_write     = 1'b0;
-            branch        = 1'b0;
-            jump          = 1'b0;
-            writeback_sel = 2'b00;
-            alu_op        = 2'b00;
-        end
-    endcase
-end
+            default: begin
+                reg_write     = 1'b0;
+                alu_src       = 1'b0;
+                mem_read      = 1'b0;
+                mem_write     = 1'b0;
+                branch        = 1'b0;
+                jump          = 1'b0;
+                writeback_sel = 2'b00;
+                alu_op        = 2'b00;
+            end
+        endcase
+    end
 
 endmodule
