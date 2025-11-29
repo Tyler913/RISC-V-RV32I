@@ -141,4 +141,15 @@ ALU ALU_Instance(
     .alu_zero_flag(alu_zero_flag)
 );
 
+
+Data_Memory Data_Memory_Instance (
+    .pll_1_200MHz(pll_1_200MHz),
+    .mem_write(mem_write),
+    .mem_read(mem_read),
+    .address(alu_result),
+    .write_data(read_data2),
+
+    .read_data(write_data)
+);
+
 endmodule
