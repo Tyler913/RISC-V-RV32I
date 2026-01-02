@@ -1,5 +1,0 @@
-xpm_cdc.sv,systemverilog,xpm,D:/Applications/Vivado_2025.1.1/2025.1.1/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv,incdir="../../../ipstatic"incdir="../../../../../../../../../../Applications/Vivado_2025.1.1/2025.1.1/Vivado/data/rsb/busdef"incdir="../../../ipstatic"
-xpm_VCOMP.vhd,vhdl,xpm,D:/Applications/Vivado_2025.1.1/2025.1.1/Vivado/data/ip/xpm/xpm_VCOMP.vhd,incdir="../../../ipstatic"incdir="../../../../../../../../../../Applications/Vivado_2025.1.1/2025.1.1/Vivado/data/rsb/busdef"incdir="../../../ipstatic"
-PLL_1_clk_wiz.v,verilog,xil_defaultlib,../../../../../IP/PLL_1/PLL_1_clk_wiz.v,incdir="../../../ipstatic"incdir="../../../../../../../../../../Applications/Vivado_2025.1.1/2025.1.1/Vivado/data/rsb/busdef"incdir="../../../ipstatic"
-PLL_1.v,verilog,xil_defaultlib,../../../../../IP/PLL_1/PLL_1.v,incdir="../../../ipstatic"incdir="../../../../../../../../../../Applications/Vivado_2025.1.1/2025.1.1/Vivado/data/rsb/busdef"incdir="../../../ipstatic"
-glbl.v,Verilog,xil_defaultlib,glbl.v

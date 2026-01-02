@@ -2,14 +2,14 @@
 // Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2025.1.1 (win64) Build 6233196 Thu Sep 11 21:27:30 MDT 2025
-// Date        : Sat Nov  1 01:26:44 2025
+// Date        : Fri Jan  2 17:41:02 2026
 // Host        : Tyler running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               d:/TylerHong/Development/GitHub_Project/FPGA/RISC-V-RV32I/IP/PLL_1/PLL_1_sim_netlist.v
 // Design      : PLL_1
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
-// Device      : xczu3eg-sfvc784-2-i
+// Device      : xczu2eg-sfvc784-2-i
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 

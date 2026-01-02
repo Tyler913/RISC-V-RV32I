@@ -62,7 +62,7 @@ set_param simulator.modelsimInstallPath D:/Applications/ModelSim/win64
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }
-create_project -in_memory -part xczu3eg-sfvc784-2-i
+create_project -in_memory -part xczu2eg-sfvc784-2-i
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
@@ -77,7 +77,7 @@ set_property ip_output_repo d:/TylerHong/Development/GitHub_Project/FPGA/RISC-V-
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet d:/TylerHong/Development/GitHub_Project/FPGA/RISC-V-RV32I/IP/PLL_1/PLL_1.xci
+read_ip -quiet D:/TylerHong/Development/GitHub_Project/FPGA/RISC-V-RV32I/IP/PLL_1/PLL_1.xci
 set_property used_in_implementation false [get_files -all d:/TylerHong/Development/GitHub_Project/FPGA/RISC-V-RV32I/IP/PLL_1/PLL_1_board.xdc]
 set_property used_in_implementation false [get_files -all d:/TylerHong/Development/GitHub_Project/FPGA/RISC-V-RV32I/IP/PLL_1/PLL_1.xdc]
 set_property used_in_implementation false [get_files -all d:/TylerHong/Development/GitHub_Project/FPGA/RISC-V-RV32I/IP/PLL_1/PLL_1_ooc.xdc]
@@ -103,7 +103,7 @@ if { $cacheID == "" } {
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
-synth_design -top PLL_1 -part xczu3eg-sfvc784-2-i -incremental_mode off -mode out_of_context
+synth_design -top PLL_1 -part xczu2eg-sfvc784-2-i -incremental_mode off -mode out_of_context
 OPTRACE "synth_design" END { }
 OPTRACE "Write IP Cache" START { }
 

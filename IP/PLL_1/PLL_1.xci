@@ -586,7 +586,7 @@
         "ARCHITECTURE": [ { "value": "zynquplus" } ],
         "BASE_BOARD_PART": [ { "value": "" } ],
         "BOARD_CONNECTIONS": [ { "value": "" } ],
-        "DEVICE": [ { "value": "xczu3eg" } ],
+        "DEVICE": [ { "value": "xczu2eg" } ],
         "PACKAGE": [ { "value": "sfvc784" } ],
         "PREFHDL": [ { "value": "VERILOG" } ],
         "SILICON_REVISION": [ { "value": "" } ],
