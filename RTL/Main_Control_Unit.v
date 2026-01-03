@@ -20,6 +20,16 @@ module Main_Control_Unit (
 );
 
     always @(*) begin
+        // Safe defaults (prevents latch inference)
+        reg_write     = 1'b0;
+        alu_src       = 1'b0;
+        mem_read      = 1'b0;
+        mem_write     = 1'b0;
+        branch        = 1'b0;
+        jump          = 1'b0;
+        writeback_sel = 2'b00;
+        alu_op        = 2'b00;
+
         case (opcode)
             7'b0110011: begin
                 reg_write     = 1'b1;
@@ -55,9 +65,7 @@ module Main_Control_Unit (
 
             7'b0110111: begin
                 reg_write     = 1'b1;
-                alu_src       = 1'b1;
                 writeback_sel = 2'b11;
-                alu_op        = 2'b00;
             end
 
             7'b0010111: begin
@@ -82,14 +90,7 @@ module Main_Control_Unit (
             end
 
             default: begin
-                reg_write     = 1'b0;
-                alu_src       = 1'b0;
-                mem_read      = 1'b0;
-                mem_write     = 1'b0;
-                branch        = 1'b0;
-                jump          = 1'b0;
-                writeback_sel = 2'b00;
-                alu_op        = 2'b00;
+                // Keep safe defaults
             end
         endcase
     end
