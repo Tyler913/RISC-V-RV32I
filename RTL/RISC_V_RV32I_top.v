@@ -43,12 +43,16 @@ module RISC_V_RV32I_top (
     // Input for Register_File
     wire [31:0] write_data;
 
+    // Data memory read output (used for loads)
+    wire [31:0] mem_read_data;
+
     // Output from Register_File
     wire [31:0] read_data1;
     wire [31:0] read_data2;
 
     // Input to ALU
     wire [31:0] immediate_value;
+    wire [31:0] operand_a;
     wire [31:0] operand_b;
 
     // Output from ALU
@@ -73,7 +77,52 @@ module RISC_V_RV32I_top (
 
     assign pc_plus_4 = current_pc_address + 32'd4;
 
-    // missing a mux here for next_pc_address calculation
+    // Instruction fields used for top-level datapath decisions
+    wire [6:0] opcode;
+    wire [2:0] funct3;
+    assign opcode = instruction[6:0];
+    assign funct3 = instruction[14:12];
+
+    // Jumps
+    wire is_jal;
+    wire is_jalr;
+    assign is_jal  = (opcode == 7'b1101111);
+    assign is_jalr = (opcode == 7'b1100111);
+
+    // AUIPC uses PC as ALU operand A (rd = PC + imm)
+    wire is_auipc;
+    assign is_auipc = (opcode == 7'b0010111);
+
+    // Branch decision (taken/not taken)
+    wire rs_equal;
+    wire rs_lt_signed;
+    wire rs_lt_unsigned;
+    assign rs_equal       = (read_data1 == read_data2);
+    assign rs_lt_signed   = ($signed(read_data1) < $signed(read_data2));
+    assign rs_lt_unsigned = (read_data1 < read_data2);
+
+    wire branch_taken;
+    assign branch_taken = branch && (
+        ((funct3 == 3'b000) && rs_equal)            || // beq
+        ((funct3 == 3'b001) && ~rs_equal)           || // bne
+        ((funct3 == 3'b100) && rs_lt_signed)        || // blt
+        ((funct3 == 3'b101) && ~rs_lt_signed)       || // bge
+        ((funct3 == 3'b110) && rs_lt_unsigned)      || // bltu
+        ((funct3 == 3'b111) && ~rs_lt_unsigned)        // bgeu
+    );
+
+    // Next PC selection
+    wire [31:0] branch_target;
+    wire [31:0] jal_target;
+    wire [31:0] jalr_target;
+    assign branch_target = current_pc_address + immediate_value;
+    assign jal_target    = current_pc_address + immediate_value;
+    assign jalr_target   = (read_data1 + immediate_value) & 32'hFFFF_FFFE;
+
+    assign next_pc_address =    is_jalr        ? jalr_target  :
+                                is_jal         ? jal_target   :
+                                branch_taken   ? branch_target:
+                                pc_plus_4;
 
     Instruction_Memory Instruction_Memory_Instance (
         .program_counter(current_pc_address),
@@ -120,10 +169,20 @@ module RISC_V_RV32I_top (
         .read_data2(read_data2)
     );
 
+    // Writeback mux (what value is written to rd)
+    assign write_data = (writeback_sel == 2'b00) ? alu_result     :
+                        (writeback_sel == 2'b01) ? mem_read_data  :
+                        (writeback_sel == 2'b10) ? pc_plus_4      :
+                        (writeback_sel == 2'b11) ? immediate_value:
+                        alu_result;
+
+    // ALU operands
+    assign operand_a = is_auipc ? current_pc_address : read_data1;
+
     assign operand_b = (alu_src == 1'b1) ? immediate_value : read_data2;
 
     ALU ALU_Instance(
-        .operand_a(read_data1),
+        .operand_a(operand_a),
         .operand_b(operand_b),
         .alu_control(alu_control),
 
@@ -138,7 +197,7 @@ module RISC_V_RV32I_top (
         .address(alu_result),
         .write_data(read_data2),
 
-        .read_data(write_data)
+        .read_data(mem_read_data)
     );
 
 endmodule
