@@ -81,7 +81,7 @@ read_verilog -library xil_defaultlib {
   D:/TylerHong/Development/GitHub_Project/FPGA/RISC-V-RV32I/RTL/Data_Memory.v
   D:/TylerHong/Development/GitHub_Project/FPGA/RISC-V-RV32I/RTL/Immediate_Generator.v
   D:/TylerHong/Development/GitHub_Project/FPGA/RISC-V-RV32I/RTL/Instruction_Memory.v
-  D:/TylerHong/Development/GitHub_Project/FPGA/RISC-V-RV32I/RTL/Mian_Control_Unit.v
+  D:/TylerHong/Development/GitHub_Project/FPGA/RISC-V-RV32I/RTL/Main_Control_Unit.v
   D:/TylerHong/Development/GitHub_Project/FPGA/RISC-V-RV32I/RTL/Program_Counter.v
   D:/TylerHong/Development/GitHub_Project/FPGA/RISC-V-RV32I/RTL/Register_File.v
   D:/TylerHong/Development/GitHub_Project/FPGA/RISC-V-RV32I/RTL/RISC_V_RV32I_top.v
@@ -101,6 +101,8 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental D:/TylerHong/Development/GitHub_Project/FPGA/RISC-V-RV32I/Vivado_Project/RISC-V-RV32I.srcs/utils_1/imports/synth_1/RISC_V_RV32I_top.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

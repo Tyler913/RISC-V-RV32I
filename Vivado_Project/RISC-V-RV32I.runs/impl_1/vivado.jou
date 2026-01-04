@@ -3,8 +3,8 @@
 # SW Build 6233196 on Thu Sep 11 21:27:30 MDT 2025
 # IP Build 6232796 on Fri Sep 12 01:46:16 MDT 2025
 # SharedData Build 6233195 on Thu Sep 11 17:56:43 MDT 2025
-# Start of session at: Fri Jan  2 17:42:01 2026
-# Process ID         : 22772
+# Start of session at: Sat Jan  3 22:02:13 2026
+# Process ID         : 31592
 # Current directory  : D:/TylerHong/Development/GitHub_Project/FPGA/RISC-V-RV32I/Vivado_Project/RISC-V-RV32I.runs/impl_1
 # Command line       : vivado.exe -log RISC_V_RV32I_top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source RISC_V_RV32I_top.tcl -notrace
 # Log file           : D:/TylerHong/Development/GitHub_Project/FPGA/RISC-V-RV32I/Vivado_Project/RISC-V-RV32I.runs/impl_1/RISC_V_RV32I_top.vdi
@@ -19,6 +19,6 @@
 # Host memory        : 33945 MB
 # Swap memory        : 2147 MB
 # Total Virtual      : 36093 MB
-# Available Virtual  : 16251 MB
+# Available Virtual  : 10719 MB
 #-----------------------------------------------------------
 source RISC_V_RV32I_top.tcl -notrace
